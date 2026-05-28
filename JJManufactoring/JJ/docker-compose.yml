@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: jj-manufactoring-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+    ports:
+      - "${DB_PORT}:3306"
+    volumes:
+      - jj-manufactoring-db-data:/var/lib/mysql
+    networks:
+      - jj-network
+
+volumes:
+  jj-manufactoring-db-data:
+
+networks:
+  jj-network:
