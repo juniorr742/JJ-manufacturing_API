@@ -10,6 +10,7 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.UUID;
 
 
 @Entity
@@ -18,9 +19,9 @@ import java.util.List;
 public class Employees {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Setter(AccessLevel.NONE)
-    private Integer id;
+    private UUID id;
 
     @NotBlank
     private String name;
