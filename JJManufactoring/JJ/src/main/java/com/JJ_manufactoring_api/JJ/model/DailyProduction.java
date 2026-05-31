@@ -23,10 +23,9 @@ public class DailyProduction {
     @ManyToOne
     @JoinColumn(name = "orders_id", nullable = false)
     @NotNull
-
     private Order order;
-    @Column(name = "current_date")
 
+    @Column(name = "current_date")
     @NotNull
     private LocalDate currentDate;
 
