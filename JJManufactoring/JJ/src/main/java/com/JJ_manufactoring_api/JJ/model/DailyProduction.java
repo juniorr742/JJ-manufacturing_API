@@ -25,7 +25,7 @@ public class DailyProduction {
     @NotNull
     private Order order;
 
-    @Column(name = "current_date")
+    @Column(name = "production_date")
     @NotNull
     private LocalDate currentDate;
 

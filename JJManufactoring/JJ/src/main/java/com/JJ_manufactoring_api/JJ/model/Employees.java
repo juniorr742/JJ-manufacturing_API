@@ -47,7 +47,7 @@ public class Employees {
     @NotNull
     private LocalDate birthDay;
 
-    @ManyToMany(mappedBy = "employess")
+    @ManyToMany(mappedBy = "employees")
     private List<DailyProduction> dailyProductions;
 
 }
