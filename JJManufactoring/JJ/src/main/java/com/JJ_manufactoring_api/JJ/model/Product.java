@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Data
@@ -18,7 +19,7 @@ public class Product {
     private UUID id;
 
     @NotNull(message = "O preço não pode ser vazio")
-    private double price;
+    private BigDecimal price;
 
     @NotBlank(message = "O nome do produto é obrigatório")
     private String name;

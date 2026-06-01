@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Data
@@ -26,5 +27,5 @@ public class Financial {
 
     @NotNull
     @Column(name = "total_billed")
-    private double totalBilled;
+    private BigDecimal totalBilled;
 }
